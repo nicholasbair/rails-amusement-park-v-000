@@ -9,7 +9,7 @@ describe 'Feature Test: User Signup', :type => :feature do
     expect(current_path).to eq('/users/1')
     expect(page).to have_content("Amy Poehler")
     expect(page).to have_content("Mood")
-    expect(page).to have_content("happy")
+    expect(page).to have_content("sad")
     expect(page).to have_content("15")
     expect(page).to have_content("58")
   end
@@ -240,7 +240,7 @@ describe 'Feature Test: Go on a Ride', :type => :feature do
     click_link("Go on #{@teacups.name}")
     click_button("Go on this ride")
     expect(page).to have_content("You are not tall enough to ride the #{@teacups.name}")
-    expect(page).to have_content("happy")
+    expect(page).to have_content("sad")
   end
 
   it "when the user doesn't have enough tickets, clicking on 'Go on this ride' displays a sorry message" do
